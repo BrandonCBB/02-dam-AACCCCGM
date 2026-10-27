@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/produc_list_screen.dart';
+import 'screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,8 +13,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'App Gastronómica',
-      theme: ThemeData(primarySwatch: Colors.orange),
-      home: const ProductListScreen(),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
+        useMaterial3: true,
+      ),
+      home: const SplashScreen(), 
     );
   }
 }

@@ -1,31 +1,12 @@
-// lib/models/product.dart
+import 'package:flutter/material.dart';
 
-class Product {
-  final int id;
-  final String title;
-  final double price;
-  final String description;
-  final String category;
-  final String image;
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
-  Product({
-    required this.id,
-    required this.title,
-    required this.price,
-    required this.description,
-    required this.category,
-    required this.image,
-  });
-
-  // Constructor factory para convertir la respuesta JSON a una instancia de Product
-  factory Product.fromJson(Map<String, dynamic> json) {
-    return Product(
-      id: json['id'],
-      title: json['title'] ?? '',
-      price: (json['price'] as num).toDouble(),
-      description: json['description'] ?? '',
-      category: json['category'] ?? '',
-      image: json['image'] ?? '',
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: Text('Home'),
     );
   }
 }

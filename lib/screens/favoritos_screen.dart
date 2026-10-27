@@ -7,11 +7,27 @@ class FavoritosScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Favoritos"),
-        backgroundColor: const Color.fromARGB(255, 17, 90, 237),
+        title: const Text('Mis Favoritos'),
+        backgroundColor: Colors.blue, 
+        foregroundColor: Colors.white,
       ),
-      body: const Center(
-        child: Text("Pantalla de Favoritos"),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.favorite_border, size: 80, color: Colors.grey[400]),
+            const SizedBox(height: 16),
+            const Text(
+              'Aún no tienes platillos guardados',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              'Marca tus recetas preferidas para verlas aquí.',
+              style: TextStyle(color: Colors.grey[600]),
+            ),
+          ],
+        ),
       ),
     );
   }
